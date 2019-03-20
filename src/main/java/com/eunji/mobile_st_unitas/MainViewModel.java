@@ -3,14 +3,15 @@ package com.eunji.mobile_st_unitas;
 import android.app.Activity;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.eunji.mobile_st_unitas.result.ImageItem;
+import com.eunji.mobile_st_unitas.result.KakaoAPI;
+import com.eunji.mobile_st_unitas.result.KakaoData;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
@@ -23,32 +24,10 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class MainViewModel implements View.OnClickListener  {
+public class MainViewModel extends MainModel implements View.OnClickListener  {
     private Activity activity;
     private MainModel mainModel;
 
-    private EditText editText;
-    private Button btn;
-
-    private String oldWord, newWord;
-
-    private Gson gson;
-
-    private Retrofit retrofit;
-    private KakaoAPI kakaoAPI;
-    private KakaoData kakaoData;
-
-    private RecyclerView recyclerView;
-    private RecyclerAdapter adapter;
-
-    private ArrayList<ImageItem> img;
-
-    private ArrayList<String> imgurl = new ArrayList<>();
-    private ArrayList<Integer> imgHeight = new ArrayList<>();
-    private ArrayList<Integer> imgWidth = new ArrayList<>();
-
-    private int searchNum = 0;
-    private ProgressBar progressBar;
 
     public MainViewModel(Activity activity) {
         this.activity = activity;
@@ -68,7 +47,7 @@ public class MainViewModel implements View.OnClickListener  {
         gson = new Gson();
 
         recyclerView = activity.findViewById(R.id.recyclerView);
-        adapter = new RecyclerAdapter(img, activity.getApplicationContext());
+//        adapter = new RecyclerAdapter(img, activity.getApplicationContext());
 
         recyclerView.setLayoutManager(new LinearLayoutManager(activity.getApplicationContext()));
         recyclerView.setAdapter(adapter);

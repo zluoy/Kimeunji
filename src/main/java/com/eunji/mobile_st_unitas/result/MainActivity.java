@@ -1,4 +1,4 @@
-package com.eunji.mobile_st_unitas;
+package com.eunji.mobile_st_unitas.result;
 
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -17,6 +17,7 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.eunji.mobile_st_unitas.R;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;

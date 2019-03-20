@@ -1,4 +1,4 @@
-package com.eunji.mobile_st_unitas;
+package com.eunji.mobile_st_unitas.result;
 
 
 public class ImageItem {

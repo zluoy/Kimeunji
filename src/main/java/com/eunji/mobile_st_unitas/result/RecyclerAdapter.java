@@ -1,20 +1,20 @@
-package com.eunji.mobile_st_unitas;
+package com.eunji.mobile_st_unitas.result;
 
 import android.app.Activity;
-import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
-import android.widget.RelativeLayout;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.eunji.mobile_st_unitas.R;
+import com.eunji.mobile_st_unitas.result.ImageItem;
+import com.eunji.mobile_st_unitas.result.LoadMoreItems;
 
 import java.util.ArrayList;
 
